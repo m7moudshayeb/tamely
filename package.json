@@ -21,7 +21,7 @@
     "oauth:setup": "yarn workspace @tamely/be oauth:setup"
   },
   "engines": {
-    "node": ">=22.12"
+    "node": ">=22.19"
   },
   "packageManager": "yarn@1.22.22"
 }
