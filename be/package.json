@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "wrangler dev --port 8877 --inspector-port 9339",
-    "deploy": "wrangler deploy --domain tamely.dev",
+    "deploy": "wrangler deploy --domain tamely.dev --domain www.tamely.dev",
     "typecheck": "tsc --noEmit",
     "oauth:setup": "node --experimental-strip-types --no-warnings scripts/oauth-setup/index.ts"
   },

@@ -64,3 +64,9 @@ test("the strict script policy blocks nothing the app itself needs", async ({ pa
   await visit("/app/guide/turnstile", () => page.getByTestId("guide").waitFor());
   expect(blocked).toEqual([]);
 });
+
+test("www sends visitors to the main address", async ({ request }) => {
+  const r = await request.get("/learn?x=1", { headers: { Host: "www.tamely.dev" }, maxRedirects: 0 });
+  expect(r.status()).toBe(301);
+  expect(r.headers().location).toBe("http://tamely.dev/learn?x=1");
+});

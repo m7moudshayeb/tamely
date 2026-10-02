@@ -48,7 +48,7 @@ For live UI editing, run `yarn dev:be` and `yarn dev:fe` together and open http:
 |---|---|
 | Root directory | `be` |
 | Build command | `cd .. && yarn install --frozen-lockfile && yarn build:fe` |
-| Deploy command | `npx wrangler deploy --domain tamely.dev` |
+| Deploy command | `npx wrangler deploy --domain tamely.dev --domain www.tamely.dev` |
 | Build variable | `PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1` |
 | Secret (Settings → Variables and Secrets) | `SESSION_SECRET`: output of `openssl rand -base64 48` |
 
