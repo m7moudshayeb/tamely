@@ -3,7 +3,12 @@
   "version": "1.0.0",
   "private": true,
   "description": "Cloudflare in plain words: a chat-first, simple control panel on top of the Cloudflare API.",
-  "workspaces": ["shared", "be", "fe", "e2e"],
+  "workspaces": [
+    "shared",
+    "be",
+    "fe",
+    "e2e"
+  ],
   "scripts": {
     "dev": "yarn build:fe && yarn workspace @tamely/be dev",
     "dev:fe": "yarn workspace @tamely/fe dev",
@@ -15,5 +20,8 @@
     "deploy": "yarn build:fe && yarn workspace @tamely/be deploy",
     "oauth:setup": "yarn workspace @tamely/be oauth:setup"
   },
-  "engines": { "node": ">=22.12" }
+  "engines": {
+    "node": ">=22.12"
+  },
+  "packageManager": "yarn@1.22.22"
 }
