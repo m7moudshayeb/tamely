@@ -1,0 +1,11 @@
+.root { position: relative; display: inline-flex; padding: 2px; border-radius: var(--r-sm); background: var(--c-fill); }
+.thumb {
+  position: absolute; top: 2px; bottom: 2px; left: 2px; border-radius: 7px; background: var(--c-surface-raised);
+  box-shadow: 0 3px 8px rgb(0 0 0 / 0.08), 0 0 0 0.5px rgb(0 0 0 / 0.06);
+  transition: transform var(--dur-3) var(--ease);
+}
+.seg {
+  position: relative; z-index: 1; flex: 1; min-width: 52px; height: 24px; padding: 0 10px; border: 0; background: none;
+  font: var(--t-subhead); font-weight: 600; color: var(--c-ink-2); cursor: pointer; border-radius: 7px; white-space: nowrap;
+}
+.seg[aria-checked="true"] { color: var(--c-ink); }

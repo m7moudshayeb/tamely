@@ -1,0 +1,17 @@
+{
+  "name": "@tamely/shared",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./catalog": "./src/catalog/index.ts",
+    "./glossary": "./src/glossary/index.ts",
+    "./token": "./src/token/index.ts",
+    "./types": "./src/types/index.ts",
+    "./routes": "./src/routes/index.ts",
+    "./copy": "./src/copy/index.ts",
+    "./sidebar": "./src/sidebar/index.ts"
+  },
+  "scripts": { "typecheck": "tsc --noEmit" },
+  "devDependencies": { "typescript": "^5.9.0" }
+}

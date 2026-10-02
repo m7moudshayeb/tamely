@@ -1,0 +1,10 @@
+.pad { padding: 4px 16px; }
+.card { display: grid; gap: var(--s-3); justify-items: start; }
+.card h2 { font: var(--t-title3); }
+.card > p { color: var(--c-ink-2); }
+.steps { margin: 0; padding-left: 20px; display: grid; gap: 6px; color: var(--c-ink-2); }
+.steps b { color: var(--c-ink); }
+.row { display: flex; align-items: center; gap: var(--s-4); flex-wrap: wrap; }
+.replace { display: flex; gap: var(--s-2); align-items: flex-start; width: 100%; }
+.replace > div { flex: 1; }
+.replace button { margin-top: 3px; }

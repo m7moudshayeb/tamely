@@ -1,0 +1,33 @@
+---
+import ConnectIsland from "../connect/ConnectIsland";
+import { Icon } from "@ui";
+---
+<section id="connect" class="connect">
+  <div class="intro">
+    <p class="kicker">Get started</p>
+    <h2>Connect in about two minutes.</h2>
+    <p>You create a key on Cloudflare that lets Tamely read your sites and prepare changes. We open the page with every permission already filled in.</p>
+    <ul>
+      <li><Icon name="lock" size={14} /><span><b>Your key stays with you.</b> It's encrypted inside a secure cookie in your browser. Our server keeps nothing.</span></li>
+      <li><Icon name="checkCircle" size={14} /><span><b>You approve every change.</b> The assistant can only suggest. You press Confirm.</span></li>
+      <li><Icon name="sparkles" size={14} /><span><b>Free AI, on your account.</b> The assistant uses Cloudflare's daily free AI allowance under your key. No bill from us.</span></li>
+      <li><Icon name="power" size={14} /><span><b>Disconnect any time.</b> Delete the key on Cloudflare and access ends instantly.</span></li>
+    </ul>
+  </div>
+  <div class="card">
+    <ConnectIsland client:visible />
+  </div>
+</section>
+<style>
+  .connect { padding: var(--s-12) max(24px, calc((100% - 1080px) / 2)); display: grid; grid-template-columns: 1fr 1.1fr; gap: var(--s-8); align-items: start; scroll-margin-top: 60px; }
+  .intro { display: grid; gap: var(--s-4); position: sticky; top: 100px; }
+  .kicker { font: var(--t-subhead); font-weight: 700; color: var(--c-accent-ink); text-transform: uppercase; letter-spacing: var(--tracking-caps); }
+  h2 { font: var(--t-large); font-size: clamp(1.5rem, 3vw, 2rem); letter-spacing: var(--tracking-tight); }
+  .intro > p { font: var(--t-headline); font-weight: 400; color: var(--c-ink-2); }
+  ul { list-style: none; margin: var(--s-2) 0 0; padding: 0; display: grid; gap: var(--s-4); }
+  li { display: flex; gap: 12px; color: var(--c-ink-2); }
+  li :global(svg) { flex: none; margin-top: 2px; color: var(--c-accent-ink); }
+  li b { color: var(--c-ink); }
+  .card { padding: var(--s-4) var(--s-5) var(--s-2); border-radius: var(--r-lg); background: var(--c-surface); box-shadow: var(--shadow-2); min-height: 420px; }
+  @media (max-width: 900px) { .connect { grid-template-columns: 1fr; } .intro { position: static; } .card { padding: var(--s-4); } }
+</style>

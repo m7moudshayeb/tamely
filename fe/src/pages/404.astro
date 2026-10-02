@@ -1,0 +1,22 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Icon } from "@ui";
+---
+<BaseLayout title="Page not found" noindex>
+  <main class="nf">
+    <span class="icon"><Icon name="compass" size={34} /></span>
+    <h1>This page wandered off.</h1>
+    <p>The link may be old. Head back home or open your sites.</p>
+    <div><a class="home" href="/">Home</a><a class="app" href="/app">Open Tamely</a></div>
+  </main>
+</BaseLayout>
+<style>
+  .nf { min-height: 100vh; display: grid; place-content: center; justify-items: center; gap: var(--s-4); text-align: center; padding: var(--s-6); }
+  .icon { display: grid; place-items: center; width: 72px; height: 72px; border-radius: 22px; background: var(--c-accent-soft); color: var(--c-accent-ink); }
+  h1 { font: var(--t-title1); letter-spacing: var(--tracking-tight); }
+  p { color: var(--c-ink-2); }
+  div { display: flex; gap: var(--s-3); }
+  a { height: 44px; padding: 0 20px; display: inline-flex; align-items: center; border-radius: var(--r-pill); font: var(--t-body-strong); }
+  .home { background: var(--c-fill); }
+  .app { background: var(--c-accent); color: var(--c-on-accent); }
+</style>

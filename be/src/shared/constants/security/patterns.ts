@@ -1,0 +1,12 @@
+export const ZONE_ID = /^[a-f0-9]{32}$/i;
+export const RECORD_ID = /^[a-f0-9]{32}$/i;
+export const RULE_ID = /^[a-z0-9]{8,64}$/i;
+export const API_TOKEN = /^[A-Za-z0-9_\-]{20,200}$/;
+export const IPV4 = /^(25[0-5]|2[0-4]\d|1?\d?\d)(\.(25[0-5]|2[0-4]\d|1?\d?\d)){3}$/;
+export const IPV6 = /^[0-9a-f:]+$/i;
+export const HOSTNAME = /^(?=.{1,253}$)([a-z0-9_]([a-z0-9-_]{0,61}[a-z0-9_])?\.)+[a-z]{2,}\.?$/i;
+export const RECORD_NAME = /^(@|\*|(\*\.)?[a-z0-9_]([a-z0-9-_]{0,61}[a-z0-9_])?(\.[a-z0-9_]([a-z0-9-_]{0,61}[a-z0-9_])?)*)$/i;
+export const EMAIL = /^[^\s@"<>]+@[^\s@"<>]+\.[^\s@"<>]+$/;
+export const EMAIL_LOCAL = /^[a-z0-9._+-]{1,64}$/;
+export const URL_PATH = /^\/[A-Za-z0-9\-._~/%]*$/;
+export const HTTP_URL = /^https?:\/\/[^\s"\\]+$/;

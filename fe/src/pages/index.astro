@@ -1,0 +1,59 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ConnectSection from "../features/landing/ConnectSection.astro";
+import Footer from "../features/landing/Footer.astro";
+import Header from "../features/landing/Header.astro";
+import Hero from "../features/landing/Hero.astro";
+import { SITE } from "@shared/constants/seo";
+
+const url = Astro.site?.toString() || "/";
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: SITE.name,
+    applicationCategory: "WebApplication",
+    operatingSystem: "Web",
+    description: SITE.description,
+    url,
+    offers: { "@type": "Offer", price: "0", priceCurrency: "USD" },
+    isAccessibleForFree: true,
+    image: new URL(SITE.ogImage.path, url).toString(),
+    author: { "@type": "Person", name: SITE.author.name, url: SITE.author.url },
+    featureList: [
+      "Ask about your Cloudflare site in plain words, with cited answers",
+      "Daily briefing of what needs a look",
+      "One-tap fixes that always wait for your confirmation",
+      "Plain-words guides for every Cloudflare dashboard page",
+      "Runs on your own Cloudflare AI, free up to the daily allowance",
+    ],
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: SITE.name,
+    url,
+    description: SITE.description,
+    publisher: { "@type": "Person", name: SITE.author.name, url: SITE.author.url },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "Connect Cloudflare to Tamely",
+    totalTime: "PT2M",
+    step: [
+      { "@type": "HowToStep", name: "Create a key", text: "Open Cloudflare's token page from Tamely. Every permission is already filled in." },
+      { "@type": "HowToStep", name: "Approve and copy", text: "Press Continue to summary, then Create Token, and copy the token." },
+      { "@type": "HowToStep", name: "Paste it", text: "Paste the token into Tamely and press Connect." },
+    ],
+  },
+];
+---
+<BaseLayout jsonLd={jsonLd}>
+  <Header />
+  <main>
+    <Hero />
+    <ConnectSection />
+  </main>
+  <Footer />
+</BaseLayout>

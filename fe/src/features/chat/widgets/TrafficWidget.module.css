@@ -1,0 +1,4 @@
+.widget { display: grid; gap: var(--s-3); padding: var(--s-4); border-radius: var(--r-lg); background: var(--c-surface-raised); box-shadow: var(--shadow-1); }
+.stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--s-3); }
+.more { display: inline-flex; align-items: center; gap: 2px; justify-self: start; font: var(--t-subhead); font-weight: 600; color: var(--c-accent-ink); }
+@media (max-width: 520px) { .stats { grid-template-columns: 1fr 1fr; } }

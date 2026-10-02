@@ -1,0 +1,6 @@
+.card { border-radius: var(--r-xl); background: var(--c-surface); box-shadow: var(--shadow-1); min-width: 0; }
+.inset { background: var(--c-surface-inset); box-shadow: inset 0 0 0 0.5px var(--c-separator); }
+.accent { background: linear-gradient(160deg, var(--c-accent-soft), var(--c-surface) 60%); }
+.p_none { padding: 0; }
+.p_md { padding: var(--s-3); }
+.p_lg { padding: var(--s-4); }

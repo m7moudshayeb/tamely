@@ -1,0 +1,2 @@
+.link { display: inline-flex; align-items: center; gap: 2px; color: var(--c-accent-ink); font-weight: 600; }
+.link:hover { text-decoration: underline; text-underline-offset: 3px; }

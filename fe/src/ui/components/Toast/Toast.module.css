@@ -1,0 +1,10 @@
+.stack { position: fixed; z-index: 200; left: 50%; bottom: 24px; transform: translateX(-50%); display: grid; gap: 8px; width: min(440px, calc(100vw - 32px)); pointer-events: none; }
+.toast {
+  display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: var(--r-lg);
+  background: var(--c-glass); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px);
+  box-shadow: var(--shadow-3); font: var(--t-callout); color: var(--c-ink); animation: in var(--dur-3) var(--ease-spring);
+}
+.good svg { color: var(--c-good); }
+.danger svg { color: var(--c-danger); }
+.info svg { color: var(--c-info); }
+@keyframes in { from { opacity: 0; transform: translateY(12px) scale(0.98); } }

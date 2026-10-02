@@ -1,0 +1,66 @@
+/* Single source of truth for color. Nothing outside src/ui may use raw color values. */
+:root {
+  color-scheme: light;
+  /* Surfaces: a warm, not-quite-white canvas with lighter cards on top */
+  --c-canvas: #f3f2ef;
+  --c-canvas-deep: #ebe9e4;
+  --c-surface: #fdfdfc;
+  --c-surface-raised: #ffffff;
+  --c-surface-inset: #f7f6f3;
+  --c-glass: rgb(250 249 247 / 0.72);
+  --c-fill: rgb(118 116 110 / 0.1);
+  --c-fill-strong: rgb(118 116 110 / 0.18);
+  --c-separator: rgb(60 58 52 / 0.1);
+  --c-separator-strong: rgb(60 58 52 / 0.18);
+
+  /* Ink */
+  --c-ink: #1d1d1f;
+  --c-ink-2: #5f5e62;
+  --c-ink-3: #86858a;
+  --c-ink-inverse: #ffffff;
+  --c-ink-raised: #3a3a3d;
+  --c-shadow-mark: rgb(29 29 31 / 0.22);
+
+  /* Brand: quiet light gray fills with ink text; graphite for text and links */
+  --c-accent: #dedee3;
+  --c-accent-hover: #d1d1d7;
+  --c-accent-bright: #e9e9ee;
+  --c-accent-soft: rgb(120 120 128 / 0.12);
+  --c-accent-ink: #3a3a3d;
+  --c-accent-glow: rgb(29 29 31 / 0.12);
+  --c-accent-edge: rgb(29 29 31 / 0.1);
+  --c-on-accent: #1d1d1f;
+
+  /* Status (always paired with an icon and a label) */
+  --c-good: #1f8a3c;
+  --c-good-soft: rgb(52 199 89 / 0.14);
+  --c-attention: #b25400;
+  --c-attention-soft: rgb(255 159 10 / 0.16);
+  --c-info: #0a6dc2;
+  --c-info-soft: rgb(10 132 255 / 0.12);
+  --c-danger: #d1180b;
+  --c-danger-soft: rgb(255 59 48 / 0.12);
+  --c-switch-on: #34c759;
+
+  /* Icon tiles (iOS Settings style) */
+  --c-tile-brand: #7c7c84;
+  --c-tile-blue: #2f7de1;
+  --c-tile-green: #2fb35a;
+  --c-tile-teal: #17a3a3;
+  --c-tile-pink: #e5487a;
+  --c-tile-purple: #8e5bd8;
+  --c-tile-yellow: #e9a400;
+  --c-tile-graphite: #6c6b70;
+  --c-tile-red: #e5483d;
+
+  /* Charts: validated categorical order (blue, pink, aqua) */
+  --c-series-1: #2a78d6;
+  --c-series-2: #e87ba4;
+  --c-series-3: #1baf7a;
+  --c-series-muted: #c9c7c1;
+  --c-chart-grid: rgb(60 58 52 / 0.08);
+
+  --c-focus: rgb(60 60 67 / 0.45);
+  --c-scrim: rgb(29 29 31 / 0.28);
+  --c-on-dark-fill: rgb(255 255 255 / 0.07);
+}

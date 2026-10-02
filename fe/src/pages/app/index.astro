@@ -1,0 +1,7 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import App from "../../features/shell/App";
+---
+<BaseLayout title="Your sites" noindex>
+  <App client:only="react" />
+</BaseLayout>

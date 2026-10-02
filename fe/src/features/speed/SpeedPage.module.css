@@ -1,0 +1,4 @@
+.hero { display: flex; align-items: center; justify-content: space-between; gap: var(--s-6); flex-wrap: wrap; background: linear-gradient(140deg, var(--c-accent-soft), var(--c-surface) 55%); }
+.heroText { display: grid; gap: var(--s-3); justify-items: start; flex: 1 1 280px; }
+.heroText h2 { font: var(--t-title2); letter-spacing: var(--tracking-title); }
+.heroText p { color: var(--c-ink-2); max-width: 40ch; }

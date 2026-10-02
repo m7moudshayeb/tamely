@@ -1,0 +1,7 @@
+.trail { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.trail li { display: flex; align-items: center; gap: 8px; font: var(--t-subhead); font-weight: 500; color: var(--c-ink-3); animation: in var(--dur-2) var(--ease); }
+.mark { display: grid; place-items: center; width: 16px; height: 16px; flex: none; }
+.running { color: var(--c-ink-2) !important; }
+.done .mark { color: var(--c-good); }
+.error .mark { color: var(--c-attention); }
+@keyframes in { from { opacity: 0; transform: translateX(-4px); } }

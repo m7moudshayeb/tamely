@@ -1,0 +1,13 @@
+.btn {
+  display: inline-grid; place-items: center; flex: none; border: 0; cursor: pointer;
+  border-radius: var(--r-sm); color: var(--c-ink-2);
+  transition: background var(--dur-1) var(--ease), color var(--dur-1), transform var(--dur-1) var(--ease);
+}
+.btn:active:not(:disabled) { transform: scale(0.92); }
+.btn:disabled { opacity: 0.4; cursor: default; }
+.plain { background: transparent; }
+.plain:hover:not(:disabled) { background: var(--c-fill); color: var(--c-ink); }
+.gray { background: var(--c-fill); color: var(--c-ink); }
+.gray:hover:not(:disabled) { background: var(--c-fill-strong); }
+.filled { background: var(--c-accent); color: var(--c-on-accent); }
+.filled:hover:not(:disabled) { background: var(--c-accent-hover); }

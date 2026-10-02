@@ -1,0 +1,8 @@
+.working { display: flex; align-items: center; gap: 8px; font: var(--t-subhead); font-weight: 500; color: var(--c-ink-3); animation: in var(--dur-2) var(--ease); }
+.shimmer {
+  background: linear-gradient(90deg, var(--c-ink-3) 0%, var(--c-ink) 45%, var(--c-ink-3) 90%); background-size: 200% 100%;
+  -webkit-background-clip: text; background-clip: text; color: transparent; animation: sweep 1.6s linear infinite;
+}
+@keyframes sweep { from { background-position: 100% 0; } to { background-position: -100% 0; } }
+@keyframes in { from { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .shimmer { animation: none; color: var(--c-ink-2); background: none; } }

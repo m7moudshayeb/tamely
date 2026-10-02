@@ -1,0 +1,13 @@
+.user {
+  justify-self: end; max-width: min(78%, 560px); padding: 7px 12px; border-radius: 12px 12px 4px 12px;
+  background: var(--c-accent); color: var(--c-on-accent); font: var(--t-body); white-space: pre-wrap; overflow-wrap: anywhere;
+  animation: rise var(--dur-3) var(--ease-spring);
+}
+.assistant { display: flex; gap: var(--s-2); align-items: flex-start; animation: rise var(--dur-3) var(--ease); }
+.avatar { flex: none; margin-top: 2px; }
+.content { flex: 1; min-width: 0; display: grid; gap: var(--s-2); }
+.error { display: flex; gap: 10px; align-items: flex-start; padding: 12px 14px; border-radius: var(--r-md); background: var(--c-attention-soft); color: var(--c-ink); font: var(--t-callout); }
+.error > svg { color: var(--c-attention); flex: none; margin-top: 1px; }
+.error div { display: grid; gap: 4px; }
+.note { font: var(--t-footnote); color: var(--c-ink-3); }
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } }

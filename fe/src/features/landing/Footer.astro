@@ -1,0 +1,23 @@
+---
+import { Logo } from "@ui";
+const year = new Date().getFullYear();
+---
+<footer class="foot">
+  <Logo size={20} />
+  <nav aria-label="Footer">
+    <a href="/learn">Cloudflare terms explained</a>
+    <a href="/llms.txt">For AI assistants</a>
+  </nav>
+  <p class="credit">Built by <a href="https://x.com/m7moudshaye" target="_blank" rel="noopener author">shayeb</a></p>
+  <p>© {year} Tamely. An independent tool, not made or endorsed by Cloudflare, Inc. Cloudflare and the Cloudflare logo are trademarks and/or registered trademarks of Cloudflare, Inc.</p>
+</footer>
+<style>
+  .foot { display: grid; gap: var(--s-3); justify-items: start; padding: var(--s-8) max(24px, calc((100% - 1080px) / 2)) var(--s-10); border-top: 0.5px solid var(--c-separator-strong); }
+  nav { display: flex; gap: var(--s-5); flex-wrap: wrap; }
+  nav a { font: var(--t-subhead); color: var(--c-ink-2); }
+  nav a:hover { color: var(--c-ink); }
+  p { font: var(--t-footnote); color: var(--c-ink-3); }
+  .credit { font: var(--t-subhead); color: var(--c-ink-2); }
+  .credit a { color: var(--c-ink); font-weight: 600; }
+  .credit a:hover { text-decoration: underline; text-underline-offset: 3px; }
+</style>

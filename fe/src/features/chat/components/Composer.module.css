@@ -1,0 +1,6 @@
+.composer {
+  display: flex; align-items: flex-end; gap: var(--s-2); padding: 6px 6px 6px 14px; border-radius: var(--r-lg);
+  background: var(--c-surface-raised); box-shadow: var(--shadow-2); transition: box-shadow var(--dur-2) var(--ease);
+}
+.composer:focus-within { box-shadow: 0 0 0 4px var(--c-accent-soft), var(--shadow-2); }
+.composer textarea { padding: 5px 0; }

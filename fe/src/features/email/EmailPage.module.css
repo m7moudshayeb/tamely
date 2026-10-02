@@ -1,0 +1,7 @@
+.form { display: grid; gap: var(--s-4); }
+.form h2 { font: var(--t-headline); }
+.row { display: grid; grid-template-columns: 1fr auto 1fr; align-items: end; gap: var(--s-3); }
+.arrow { padding-bottom: 12px; color: var(--c-ink-3); font: var(--t-title3); }
+.actions { display: flex; justify-content: space-between; align-items: center; gap: var(--s-3); flex-wrap: wrap; }
+.actions p { font: var(--t-footnote); color: var(--c-ink-3); }
+@media (max-width: 640px) { .row { grid-template-columns: 1fr; } .arrow { display: none; } }

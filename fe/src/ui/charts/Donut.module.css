@@ -1,0 +1,10 @@
+.donut { display: flex; align-items: center; gap: var(--s-6); flex-wrap: wrap; }
+.chart { position: relative; flex: none; }
+.center { position: absolute; inset: 0; display: grid; place-content: center; text-align: center; pointer-events: none; }
+.center strong { font: var(--t-title2); letter-spacing: var(--tracking-tight); }
+.center span { font: var(--t-footnote); color: var(--c-ink-3); }
+.legend { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; min-width: 160px; flex: 1; }
+.legend li { display: flex; align-items: center; gap: 8px; font: var(--t-callout); color: var(--c-ink-2); }
+.legend i { width: 10px; height: 10px; border-radius: 3px; flex: none; }
+.legend span { flex: 1; }
+.legend b { color: var(--c-ink); font-variant-numeric: tabular-nums; }

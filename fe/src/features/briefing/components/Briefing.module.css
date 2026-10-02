@@ -1,0 +1,7 @@
+.metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: var(--s-2); }
+.metric { display: grid; gap: 1px; padding: 10px; border-radius: var(--r-lg); background: var(--c-surface); box-shadow: var(--shadow-1); min-width: 0; }
+.metricLabel { font: var(--t-footnote); color: var(--c-ink-3); }
+.metricValue { font: var(--t-title2); letter-spacing: var(--tracking-tight); font-variant-numeric: tabular-nums; }
+.metricFoot { display: flex; align-items: center; justify-content: space-between; gap: 6px; min-height: 22px; }
+.up, .down { display: inline-flex; align-items: center; gap: 2px; font: var(--t-footnote); font-weight: 700; }
+.up { color: var(--c-good); } .down { color: var(--c-danger); }

@@ -1,0 +1,19 @@
+{
+  "name": "tamely",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cloudflare in plain words: a chat-first, simple control panel on top of the Cloudflare API.",
+  "workspaces": ["shared", "be", "fe", "e2e"],
+  "scripts": {
+    "dev": "yarn build:fe && yarn workspace @tamely/be dev",
+    "dev:fe": "yarn workspace @tamely/fe dev",
+    "dev:be": "yarn workspace @tamely/be dev",
+    "build": "yarn build:fe",
+    "build:fe": "yarn workspace @tamely/fe build",
+    "typecheck": "yarn workspace @tamely/shared typecheck && yarn workspace @tamely/be typecheck && yarn workspace @tamely/fe typecheck",
+    "test:e2e": "yarn build:fe && yarn workspace @tamely/e2e test",
+    "deploy": "yarn build:fe && yarn workspace @tamely/be deploy",
+    "oauth:setup": "yarn workspace @tamely/be oauth:setup"
+  },
+  "engines": { "node": ">=22.12" }
+}

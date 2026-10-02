@@ -1,0 +1,6 @@
+.head { display: flex; align-items: flex-end; justify-content: space-between; gap: var(--s-4); flex-wrap: wrap; }
+.titleRow { display: flex; gap: var(--s-3); align-items: flex-start; min-width: 0; }
+.text { display: grid; gap: 2px; min-width: 0; }
+.title { font: var(--t-large); letter-spacing: var(--tracking-tight); }
+.subtitle { font: var(--t-body); color: var(--c-ink-2); max-width: 60ch; }
+.actions { display: flex; gap: var(--s-2); align-items: center; }

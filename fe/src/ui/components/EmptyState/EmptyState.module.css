@@ -1,0 +1,4 @@
+.empty { display: grid; justify-items: center; gap: 8px; padding: var(--s-6) var(--s-4); text-align: center; }
+.icon { display: grid; place-items: center; color: var(--c-ink-3); }
+.title { font: var(--t-headline); }
+.text { font: var(--t-callout); color: var(--c-ink-2); max-width: 40ch; margin-bottom: 8px; }

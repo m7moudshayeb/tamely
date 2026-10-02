@@ -1,0 +1,21 @@
+{
+  "name": "@tamely/be",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev --port 8877 --inspector-port 9339",
+    "deploy": "wrangler deploy --domain tamely.dev",
+    "typecheck": "tsc --noEmit",
+    "oauth:setup": "node --experimental-strip-types --no-warnings scripts/oauth-setup/index.ts"
+  },
+  "dependencies": {
+    "@tamely/shared": "1.0.0",
+    "hono": "^4.9.0"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20261001.1",
+    "typescript": "^5.9.0",
+    "wrangler": "^4.40.0"
+  }
+}

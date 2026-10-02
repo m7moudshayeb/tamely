@@ -1,0 +1,7 @@
+.bar { display: grid; gap: 6px; padding: 8px 8px 8px 12px; border-radius: var(--r-lg); background: var(--c-surface-raised); box-shadow: var(--shadow-2); animation: rise var(--dur-3) var(--ease-spring); }
+.head { display: flex; align-items: center; gap: 8px; font: var(--t-callout); color: var(--c-ink-2); }
+.head > svg { color: var(--c-info); flex: none; }
+.head p { flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.head b { color: var(--c-ink); font-weight: 600; }
+@keyframes rise { from { opacity: 0; transform: translateY(6px); } }
+@media (prefers-reduced-motion: reduce) { .bar { animation: none; } }

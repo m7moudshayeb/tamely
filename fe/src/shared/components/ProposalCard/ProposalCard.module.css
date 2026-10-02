@@ -1,0 +1,17 @@
+.card { display: flex; gap: 10px; align-items: flex-start; flex-wrap: wrap; padding: 10px; border-radius: var(--r-lg); background: var(--c-surface-raised); box-shadow: inset 0 0 0 1px var(--c-accent-soft), var(--shadow-1); animation: pop var(--dur-3) var(--ease-spring); }
+.done { box-shadow: inset 0 0 0 1px var(--c-good-soft); }
+.icon { display: grid; place-items: center; color: var(--c-ink-2); flex: none; padding-top: 2px; }
+.done .icon { color: var(--c-good); }
+.body { flex: 1 1 220px; min-width: 0; display: grid; gap: 4px; }
+.top { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.top b { font: var(--t-body-strong); }
+.body p { font: var(--t-callout); color: var(--c-ink-2); }
+.result { color: var(--c-good) !important; font-weight: 500; }
+.error { color: var(--c-danger) !important; }
+.actions { display: flex; gap: 8px; align-self: center; margin-left: auto; }
+@keyframes pop { from { opacity: 0; transform: scale(0.97); } }
+.inline { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; padding: 8px 8px 8px 12px; border-radius: var(--r-md); background: var(--c-accent-soft); color: var(--c-accent-ink); font: var(--t-footnote); font-weight: 600; }
+.inline > span { flex: 1; min-width: 0; color: var(--c-ink); }
+.inline.done { background: var(--c-good-soft); color: var(--c-good); }
+.inline .error { flex-basis: 100%; font: var(--t-footnote); }
+.doneTag { display: inline-flex; align-items: center; gap: 4px; font: var(--t-footnote); font-weight: 600; color: var(--c-good); }

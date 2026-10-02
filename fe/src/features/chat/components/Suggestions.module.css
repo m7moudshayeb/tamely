@@ -1,0 +1,10 @@
+.list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--s-2); }
+.chip {
+  display: flex; align-items: center; gap: 8px; width: 100%; min-height: 32px; padding: 6px 10px; border: 0; border-radius: var(--r-md);
+  background: var(--c-surface); box-shadow: var(--shadow-1); text-align: left; font: var(--t-callout); color: var(--c-ink); cursor: pointer;
+  transition: transform var(--dur-1) var(--ease), box-shadow var(--dur-2);
+}
+.chip svg { color: var(--c-accent-ink); flex: none; }
+.chip:hover { transform: translateY(-1px); box-shadow: var(--shadow-2); }
+.chip:active { transform: scale(0.98); }
+@media (max-width: 640px) { .list { grid-template-columns: 1fr; } }

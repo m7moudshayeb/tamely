@@ -1,0 +1,76 @@
+---
+import { FAQ, GLOSSARY } from "@tamely/shared/glossary";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Footer from "../features/landing/Footer.astro";
+import Header from "../features/landing/Header.astro";
+import { Icon } from "@ui";
+
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "DefinedTermSet",
+    name: "Cloudflare terms in plain words",
+    hasDefinedTerm: GLOSSARY.map((t) => ({ "@type": "DefinedTerm", name: t.aka, alternateName: t.term, description: t.plain, url: `${Astro.site}learn#${t.id}` })),
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FAQ.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+  },
+];
+---
+<BaseLayout title="Cloudflare terms in plain words" description="DNS, SSL, cache, proxy, WAF and more, explained in one sentence each, with examples and links to Cloudflare's official docs." jsonLd={jsonLd}>
+  <Header />
+  <main class="learn">
+    <header>
+      <p class="kicker">Learn</p>
+      <h1>Cloudflare terms, in plain words.</h1>
+      <p class="sub">One sentence each, an example, and the official docs if you want more.</p>
+    </header>
+    <div class="grid">
+      {GLOSSARY.map((t) => (
+        <article id={t.id}>
+          <p class="aka">{t.aka}</p>
+          <h2>{t.term}</h2>
+          <p>{t.plain}</p>
+          <p class="example"><Icon name="sparkles" size={14} /> {t.example}</p>
+          <a href={t.docs} target="_blank" rel="noopener noreferrer">Cloudflare docs <Icon name="arrowUpRight" size={13} weight={2.2} /></a>
+        </article>
+      ))}
+    </div>
+    <section class="faq" aria-labelledby="faq-title">
+      <h2 id="faq-title">Questions</h2>
+      <dl>
+        {FAQ.map((f) => (
+          <div>
+            <dt>{f.q}</dt>
+            <dd>{f.a}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+  </main>
+  <Footer />
+</BaseLayout>
+<style>
+  .learn { padding: 120px max(24px, calc((100% - 1080px) / 2)) var(--s-16); display: grid; gap: var(--s-10); }
+  header { display: grid; gap: var(--s-3); max-width: 680px; }
+  .kicker { font: var(--t-subhead); font-weight: 700; color: var(--c-accent-ink); text-transform: uppercase; letter-spacing: var(--tracking-caps); }
+  h1 { font: var(--t-large); font-size: clamp(2.2rem, 5vw, 3.2rem); letter-spacing: var(--tracking-tight); }
+  .sub { font: var(--t-headline); font-weight: 400; color: var(--c-ink-2); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: var(--s-4); }
+  article { display: grid; gap: var(--s-2); align-content: start; padding: var(--s-6); border-radius: var(--r-xl); background: var(--c-surface); box-shadow: var(--shadow-1); scroll-margin-top: 90px; }
+  article:target { box-shadow: 0 0 0 2px var(--c-accent-bright), var(--shadow-2); }
+  .aka { font: var(--t-caption); text-transform: uppercase; letter-spacing: var(--tracking-caps); color: var(--c-ink-3); }
+  h2 { font: var(--t-title3); }
+  article > p:not(.aka) { color: var(--c-ink-2); }
+  .example { display: flex; gap: 6px; align-items: flex-start; padding: 10px 12px; border-radius: var(--r-md); background: var(--c-surface-inset); font: var(--t-callout); }
+  .example :global(svg) { flex: none; margin-top: 3px; color: var(--c-accent-ink); }
+  .faq { display: grid; gap: var(--s-4); max-width: 760px; }
+  .faq h2 { font: var(--t-title2); }
+  .faq dl { display: grid; gap: var(--s-3); margin: 0; }
+  .faq dl > div { display: grid; gap: 4px; padding: var(--s-4) var(--s-5); border-radius: var(--r-lg); background: var(--c-surface); box-shadow: var(--shadow-1); }
+  .faq dt { font: var(--t-headline); }
+  .faq dd { margin: 0; color: var(--c-ink-2); }
+  article a { display: inline-flex; align-items: center; gap: 3px; font: var(--t-subhead); font-weight: 600; color: var(--c-accent-ink); }
+</style>

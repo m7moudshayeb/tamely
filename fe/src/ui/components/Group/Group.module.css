@@ -1,0 +1,20 @@
+.group { display: grid; gap: 6px; }
+.head { display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; padding: 0 4px; min-height: 22px; }
+.title { font: var(--t-subhead); text-transform: uppercase; letter-spacing: var(--tracking-caps); color: var(--c-ink-3); }
+.body { border-radius: var(--r-lg); background: var(--c-surface); box-shadow: var(--shadow-1); overflow: hidden; }
+.footer { font: var(--t-footnote); color: var(--c-ink-3); padding: 0 4px; }
+.row {
+  position: relative; display: flex; align-items: center; gap: 10px; width: 100%; min-height: 36px; padding: 6px 10px;
+  border: 0; background: none; text-align: left; color: inherit; font: inherit;
+}
+.row + .row::before { content: ""; position: absolute; top: 0; right: 0; left: 10px; height: 0.5px; background: var(--c-separator-strong); }
+.row + .row:has(> .leading)::before { left: 38px; }
+.interactive { cursor: pointer; transition: background var(--dur-1); }
+.interactive:hover { background: var(--c-surface-inset); }
+.interactive:active { background: var(--c-fill); }
+.leading { display: flex; flex: none; }
+.main { flex: 1; min-width: 0; display: grid; gap: 1px; }
+.rowTitle { font: var(--t-body); color: var(--c-ink); overflow-wrap: anywhere; }
+.sub { font: var(--t-footnote); color: var(--c-ink-3); overflow-wrap: anywhere; }
+.trailing { display: flex; align-items: center; gap: 8px; flex: none; color: var(--c-ink-2); font: var(--t-callout); }
+.chev { color: var(--c-ink-3); opacity: 0.7; flex: none; }

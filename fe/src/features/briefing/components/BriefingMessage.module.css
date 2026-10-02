@@ -1,0 +1,24 @@
+.message { display: flex; gap: var(--s-2); align-items: flex-start; animation: in var(--dur-3) var(--ease); }
+.avatar { flex: none; margin-top: 1px; }
+.body { flex: 1; min-width: 0; display: grid; gap: var(--s-2); justify-items: start; }
+.body > * { width: 100%; }
+.body > button { width: auto; }
+.head { display: flex; align-items: flex-start; justify-content: space-between; gap: var(--s-2); }
+.hello { font: var(--t-body); color: var(--c-ink-2); }
+.hello b { color: var(--c-ink); font-weight: 650; }
+.error { font: var(--t-callout); color: var(--c-danger); }
+.when { font: var(--t-footnote); color: var(--c-ink-3); }
+.list { list-style: none; margin: 0; padding: 0; border-radius: var(--r-lg); background: var(--c-surface); box-shadow: var(--shadow-1); overflow: hidden; }
+.row { display: flex; gap: 10px; align-items: flex-start; padding: 9px 10px; }
+.row + .row { border-top: 0.5px solid var(--c-separator); }
+.icon { flex: none; margin-top: 1px; }
+.attention .icon { color: var(--c-attention); }
+.good .icon { color: var(--c-good); }
+.info .icon { color: var(--c-info); }
+.text { flex: 1; min-width: 0; display: grid; gap: 1px; font: var(--t-callout); color: var(--c-ink-2); }
+.text b { color: var(--c-ink); font-weight: 600; }
+.sources { display: flex; gap: 2px; margin-top: 2px; }
+.sources a { display: grid; place-items: center; width: 18px; height: 18px; border-radius: var(--r-xs); color: var(--c-ink-3); }
+.sources a:hover { color: var(--c-ink); background: var(--c-fill); }
+.action { flex: none; align-self: center; }
+@keyframes in { from { opacity: 0; transform: translateY(6px); } }

@@ -1,0 +1,17 @@
+.actions { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-2); }
+.where { display: flex; align-items: center; gap: 6px; font: var(--t-footnote); color: var(--c-ink-3); }
+.where b { color: var(--c-ink-2); font-weight: 600; }
+.card { padding: var(--s-4); border-radius: var(--r-xl); background: var(--c-surface); box-shadow: var(--shadow-1); }
+.guide { display: grid; gap: var(--s-3); }
+.credit { display: flex; align-items: center; gap: 6px; font: var(--t-footnote); color: var(--c-ink-3); }
+.loading { display: grid; gap: var(--s-2); }
+.error { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s-2); font: var(--t-callout); color: var(--c-ink-2); }
+.error > svg { color: var(--c-attention); }
+.error p { flex: 1; min-width: 200px; }
+.related { display: grid; gap: var(--s-2); }
+.related h2 { font: var(--t-caption); text-transform: uppercase; letter-spacing: var(--tracking-caps); color: var(--c-ink-3); }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { display: inline-flex; align-items: center; gap: 6px; height: 28px; padding: 0 10px; border-radius: var(--r-md); background: var(--c-surface); box-shadow: var(--shadow-1); font: var(--t-footnote); font-weight: 600; color: var(--c-ink); transition: background var(--dur-1); }
+.chip:hover { background: var(--c-surface-raised); }
+.chip:focus-visible { outline: 2px solid var(--c-focus); outline-offset: 2px; }
+.chip > svg { color: var(--c-ink-3); }

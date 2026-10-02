@@ -1,0 +1,14 @@
+node_modules
+.dev.vars
+.wrangler
+dist
+.astro
+e2e/artifacts
+e2e/test-results
+e2e/playwright-report
+_legacy/node_modules
+.env
+.env.*
+.DS_Store
+Claude outputs/
+_legacy/

@@ -1,0 +1,2 @@
+.error { display: flex; gap: 8px; align-items: flex-start; padding: 10px 12px; border-radius: var(--r-md); background: var(--c-danger-soft); color: var(--c-danger); font: var(--t-callout); }
+.error svg { flex: none; margin-top: 2px; }

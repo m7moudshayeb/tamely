@@ -1,0 +1,36 @@
+.sidebar {
+  position: sticky; top: 0; height: 100vh; width: var(--sidebar-w); flex: none; display: flex; flex-direction: column; gap: var(--s-3);
+  padding: var(--s-4) var(--s-2) var(--s-2); background: var(--c-glass); backdrop-filter: saturate(180%) blur(24px); -webkit-backdrop-filter: saturate(180%) blur(24px);
+  border-right: 0.5px solid var(--c-separator-strong); z-index: 30;
+}
+.brand { padding: 0 var(--s-2); }
+.nav { flex: 1; overflow: auto; display: grid; align-content: start; gap: var(--s-1); margin: 0 calc(var(--s-1) * -1); padding: 0 var(--s-1); }
+.section { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px; }
+.heading { padding: var(--s-3) var(--s-2) 2px; font: var(--t-caption); text-transform: uppercase; letter-spacing: var(--tracking-caps); color: var(--c-ink-3); }
+.link { display: flex; align-items: center; gap: 8px; height: 28px; padding: 0 6px; border-radius: var(--r-sm); font: var(--t-callout); font-weight: 500; color: var(--c-ink); transition: background var(--dur-1); }
+.link:hover { background: var(--c-fill); }
+.active, .active:hover { background: var(--c-surface-raised); box-shadow: var(--shadow-1); font-weight: 600; }
+.account { display: flex; align-items: center; gap: var(--s-2); padding: var(--s-2); border-radius: var(--r-md); background: var(--c-fill); }
+.avatar { display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--c-surface-raised); color: var(--c-ink-2); flex: none; }
+.accountName { flex: 1; min-width: 0; display: grid; }
+.accountName b { font: var(--t-subhead); font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.accountName span { font: var(--t-footnote); color: var(--c-ink-3); }
+@media (max-width: 900px) {
+  .sidebar { position: fixed; left: 0; top: 0; transform: translateX(-105%); transition: transform var(--dur-3) var(--ease); background: var(--c-canvas); box-shadow: var(--shadow-3); }
+  .open { transform: none; }
+}
+.row { display: flex; align-items: center; gap: 2px; }
+.row > .link { flex: 1; min-width: 0; }
+.link > span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.out { margin-left: auto; color: var(--c-ink-3); flex: none; }
+.row .remove { flex: none; color: var(--c-danger); animation: removeIn var(--dur-2) var(--ease-spring); }
+.row .remove:hover { background: var(--c-danger-soft); color: var(--c-danger); }
+.editing .row:has(.remove) .link { background: var(--c-surface-raised); box-shadow: var(--shadow-1); }
+.editBtn { justify-self: start; margin-top: var(--s-2); color: var(--c-ink-3); }
+.editPanel { display: grid; gap: var(--s-2); margin-top: var(--s-2); padding: var(--s-2); border-radius: var(--r-md); background: var(--c-fill); font: var(--t-footnote); color: var(--c-ink-2); }
+.editPanel a { color: var(--c-accent-ink); font-weight: 600; text-decoration: underline; text-underline-offset: 2px; }
+.editActions { display: flex; justify-content: flex-end; gap: var(--s-1); }
+@keyframes removeIn { from { opacity: 0; transform: scale(0.6); } }
+.emptyShortcut { display: flex; align-items: center; gap: 8px; height: 28px; padding: 0 6px; border-radius: var(--r-sm); border: 1px dashed var(--c-separator-strong); font: var(--t-footnote); color: var(--c-ink-3); transition: color var(--dur-1), background var(--dur-1); }
+.emptyShortcut:hover { color: var(--c-ink); background: var(--c-fill); }
+.emptyShortcut:focus-visible { outline: 2px solid var(--c-focus); outline-offset: 1px; }

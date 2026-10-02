@@ -1,0 +1,24 @@
+---
+import { Logo } from "@ui";
+import SessionCta from "./SessionCta";
+---
+<header class="nav">
+  <a href="/" class="brand" aria-label="Tamely home"><Logo size={22} /></a>
+  <nav aria-label="Main">
+    <a href="/learn">Learn</a>
+  </nav>
+  <div class="cta"><SessionCta place="header" client:load /></div>
+</header>
+<style>
+  .nav {
+    position: fixed; z-index: 20; top: 12px; left: 50%; transform: translateX(-50%);
+    display: flex; align-items: center; gap: var(--s-6); width: min(1080px, calc(100% - 24px)); height: 42px; padding: 0 7px 0 12px;
+    border-radius: var(--r-lg); background: var(--c-glass); backdrop-filter: saturate(180%) blur(20px); -webkit-backdrop-filter: saturate(180%) blur(20px);
+    box-shadow: var(--shadow-2);
+  }
+  nav { display: flex; gap: var(--s-1); margin-left: auto; }
+  nav a { padding: 5px 9px; border-radius: var(--r-sm); font: var(--t-subhead); color: var(--c-ink-2); transition: background var(--dur-1), color var(--dur-1); }
+  nav a:hover { background: var(--c-fill); color: var(--c-ink); }
+  @media (max-width: 720px) { nav { display: none; } .cta { margin-left: auto; } }
+  .cta { display: flex; }
+</style>

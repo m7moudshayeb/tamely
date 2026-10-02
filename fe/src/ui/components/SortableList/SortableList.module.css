@@ -1,0 +1,10 @@
+.list { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px; }
+.row { position: relative; min-width: 0; display: flex; align-items: center; gap: 2px; border-radius: var(--r-sm); }
+.body { flex: 1; min-width: 0; }
+.handle { display: grid; place-items: center; width: 18px; height: 28px; flex: none; padding: 0; border: 0; border-radius: var(--r-xs); background: none; color: var(--c-ink-2); cursor: grab; touch-action: none; transition: color var(--dur-1), background var(--dur-1); }
+.handle:hover, .row:hover .handle { color: var(--c-ink); background: var(--c-fill); }
+.handle:focus-visible { outline: 2px solid var(--c-focus); outline-offset: 1px; }
+.dragging { z-index: 2; background: var(--c-surface-raised); box-shadow: var(--shadow-2); cursor: grabbing; }
+.dragging .handle { cursor: grabbing; color: var(--c-ink); background: var(--c-fill-strong); }
+/* Keeps rows lined up where a list has nothing to reorder. */
+.spacer { width: 18px; flex: none; }

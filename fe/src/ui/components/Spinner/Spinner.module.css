@@ -1,0 +1,8 @@
+/* Apple-style activity indicator */
+.spinner { position: relative; display: inline-block; flex: none; color: currentColor; }
+.spinner i {
+  position: absolute; left: 44%; top: 0; width: 12%; height: 30%;
+  border-radius: 2px; background: currentColor; transform-origin: 50% 166%;
+  animation: fade 0.8s linear infinite; opacity: 0.25;
+}
+@keyframes fade { from { opacity: 0.9; } to { opacity: 0.15; } }

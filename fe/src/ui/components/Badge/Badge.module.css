@@ -1,0 +1,7 @@
+.badge { display: inline-flex; align-items: center; gap: 4px; height: 18px; padding: 0 6px; border-radius: var(--r-pill); font: var(--t-caption); letter-spacing: 0.01em; white-space: nowrap; }
+.good { background: var(--c-good-soft); color: var(--c-good); }
+.attention { background: var(--c-attention-soft); color: var(--c-attention); }
+.info { background: var(--c-info-soft); color: var(--c-info); }
+.danger { background: var(--c-danger-soft); color: var(--c-danger); }
+.neutral { background: var(--c-fill); color: var(--c-ink-2); }
+.accent { background: var(--c-accent-soft); color: var(--c-accent-ink); }

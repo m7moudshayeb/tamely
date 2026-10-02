@@ -1,0 +1,27 @@
+.guide { display: grid; gap: 4px; }
+.step { position: relative; display: grid; gap: 8px; padding: 10px 0 12px; }
+.step:not(:last-child)::after { content: ""; position: absolute; left: 9px; top: 30px; bottom: 0; width: 1.5px; border-radius: 1px; background: var(--c-separator-strong); }
+.stepHead { display: flex; align-items: center; gap: 12px; opacity: 0.7; transition: opacity var(--dur-2); }
+.activeHead { opacity: 1; }
+.stepNum {
+  display: grid; place-items: center; width: 18px; height: 18px; border-radius: 50%; flex: none; font-size: 10px;
+  background: var(--c-fill); color: var(--c-ink-2); font: var(--t-subhead); font-weight: 700;
+}
+.activeHead .stepNum { background: var(--c-accent); color: var(--c-on-accent); box-shadow: 0 0 0 3px var(--c-accent-soft); }
+.stepDone, .activeHead .stepDone { background: var(--c-good); color: var(--c-ink-inverse); box-shadow: none; }
+.stepTitle { font: var(--t-headline); }
+.stepBody { display: grid; gap: 10px; padding-left: 28px; font: var(--t-callout); color: var(--c-ink-2); }
+.actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.perms { list-style: none; margin: 0; padding: 4px 12px; display: grid; border-radius: var(--r-md); background: var(--c-surface-inset); }
+.perms li { display: grid; gap: 1px; padding: 8px 0; }
+.perms li + li { border-top: 0.5px solid var(--c-separator); }
+.perms b { color: var(--c-ink); font-weight: 600; }
+.perms span { font: var(--t-footnote); color: var(--c-ink-3); }
+@keyframes rise { from { opacity: 0; transform: translateY(8px); } }
+.steps { display: grid; gap: 2px; }
+.signin { display: grid; gap: 8px; justify-items: stretch; text-align: center; }
+.signin p { font: var(--t-footnote); color: var(--c-ink-3); }
+.signinBtn { width: 100%; }
+.or { display: flex; justify-content: center; }
+.connected { display: grid; gap: 10px; font: var(--t-callout); color: var(--c-ink-2); }
+.connected b { color: var(--c-ink); }

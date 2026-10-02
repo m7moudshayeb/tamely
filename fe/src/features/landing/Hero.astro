@@ -1,0 +1,44 @@
+---
+import { Icon } from "@ui";
+import SessionCta from "./SessionCta";
+---
+<section class="hero">
+  <div class="halo" aria-hidden="true"></div>
+  <div class="copy">
+    <p class="eyebrow"><Icon name="sparkles" size={12} /> Free · runs on your own Cloudflare AI</p>
+    <h1>Your website,<br /><span>in plain words.</span></h1>
+    <p class="lead">Ask what you want done. Tamely looks it up, explains it with sources, and prepares the change. You tap Confirm.</p>
+    <div class="ctas">
+      <SessionCta place="hero" client:load />
+    </div>
+    <ul class="trust">
+      <li><Icon name="lock" size={12} /> Token encrypted in your browser</li>
+      <li><Icon name="checkCircle" size={12} /> Nothing changes without Confirm</li>
+    </ul>
+  </div>
+  <a class="scroll" href="/#connect" aria-label="Scroll to connect"><Icon name="chevronDown" size={16} weight={2.2} /></a>
+</section>
+<style>
+  .hero {
+    position: relative; min-height: 100vh; min-height: 100svh; display: grid; place-items: center;
+    padding: 96px 24px 72px; overflow: hidden; text-align: center;
+  }
+  .halo {
+    position: absolute; left: 50%; top: 46%; width: min(900px, 120vw); height: 520px; transform: translate(-50%, -50%);
+    border-radius: 50%; background: radial-gradient(closest-side, var(--c-surface-raised), transparent); pointer-events: none;
+  }
+  .copy { position: relative; display: grid; justify-items: center; gap: var(--s-4); max-width: 760px; }
+  .eyebrow { display: inline-flex; align-items: center; gap: 5px; padding: 4px 10px; border-radius: var(--r-pill); background: var(--c-surface-raised); box-shadow: var(--shadow-1); color: var(--c-ink-2); font: var(--t-subhead); font-weight: 600; }
+  /* Elevated type: a crisp top highlight plus a soft long shadow */
+  h1 {
+    font: var(--t-hero); font-size: clamp(2.4rem, 6vw, 4.4rem); letter-spacing: -0.04em; color: var(--c-ink);
+    text-shadow: 0 1px 0 var(--c-surface-raised), 0 2px 2px var(--c-accent-edge), 0 18px 36px var(--c-accent-glow);
+  }
+  h1 span { color: var(--c-ink-2); }
+  .lead { font: var(--t-body); font-size: 1rem; color: var(--c-ink-2); max-width: 46ch; }
+  .ctas { display: flex; gap: var(--s-2); flex-wrap: wrap; justify-content: center; margin-top: var(--s-2); }
+  .trust { list-style: none; margin: 0; padding: 0; display: flex; gap: var(--s-4); flex-wrap: wrap; justify-content: center; font: var(--t-footnote); color: var(--c-ink-3); }
+  .trust li { display: inline-flex; align-items: center; gap: 4px; }
+  .scroll { position: absolute; left: 50%; bottom: 18px; transform: translateX(-50%); color: var(--c-ink-3); animation: bob 2s ease-in-out infinite; }
+  @keyframes bob { 50% { transform: translate(-50%, 5px); } }
+</style>
