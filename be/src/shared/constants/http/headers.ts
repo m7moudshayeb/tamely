@@ -17,3 +17,5 @@ export const HSTS = "max-age=31536000; includeSubDomains";
 export const API_CSP = "default-src 'none'; frame-ancestors 'none'";
 /** Biggest JSON body any endpoint needs (a full chat is ~30KB). */
 export const MAX_BODY_BYTES = 64 * 1024;
+/** For any page without its own (hash-based) policy, e.g. the 404 page: nothing inline may run. */
+export const PAGE_FALLBACK_CSP = "default-src 'self'; img-src 'self' data:; style-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; object-src 'none'";

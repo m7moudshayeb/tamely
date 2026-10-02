@@ -13,6 +13,17 @@ test("pages carry strict security headers", async ({ request }) => {
     expect(h["referrer-policy"], path).toBe("strict-origin-when-cross-origin");
     expect(h["access-control-allow-origin"], path).toBeUndefined();
   }
+  /* Pages carry their exact script fingerprints in the header; nothing inline is allowed. */
+  for (const path of ["/", "/learn", "/app"]) {
+    const csp = (await request.get(path)).headers()["content-security-policy"];
+    const script = csp.split(";").find((d) => d.trim().startsWith("script-src"))!;
+    expect(script, path).toContain("'sha256-");
+    expect(script, path).not.toContain("unsafe-inline");
+    expect(csp, path).toContain("default-src 'self'");
+  }
+  const missing = await request.get("/no-such-page");
+  expect(missing.status()).toBe(404);
+  expect(missing.headers()["content-security-policy"]).toContain("default-src 'self'");
   const api = (await request.get("/api/v1/session")).headers();
   expect(api["content-security-policy"]).toBe("default-src 'none'; frame-ancestors 'none'");
   expect(api["cache-control"]).toBe("no-store");
