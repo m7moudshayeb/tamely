@@ -1,7 +1,7 @@
 # Tamely
 
 > **This is an illustration: a working example of how I'd fix Cloudflare's dashboard.**
-> It's an independent concept project by [shayeb](https://x.com/m7moudshaye), not a Cloudflare product, and isn't made or endorsed by Cloudflare, Inc.
+> It's an independent concept project by [shayeb](https://x.com/m7moudshayeb), not a Cloudflare product, and isn't made or endorsed by Cloudflare, Inc.
 
 Cloudflare can do almost anything, but its dashboard is a maze: hundreds of pages, product names instead of plain words, and settings buried three menus deep. Tamely is the same Cloudflare, redesigned for people who just want their website to work:
 
